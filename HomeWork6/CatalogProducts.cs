@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class Starter
+    internal class CatalogProducts
     {
-        public Starter()
+        public CatalogProducts()
         {
             AllProducts = new Product[]
             {
@@ -31,14 +31,5 @@ namespace HomeWork6
         }
 
         public Product[] AllProducts { get; set; }
-
-        public string Run()
-        {
-            Basket bascet = new Basket().FullBasket(AllProducts);
-            Order order = new Order();
-            string message = order.ProcessedOrder(bascet);
-
-            return message;
-        }
     }
 }

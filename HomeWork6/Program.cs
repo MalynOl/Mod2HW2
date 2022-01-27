@@ -1,5 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-using HomeWork6;
-Starter starter = new Starter();
-string result = starter.Run();
-Console.WriteLine(result);
+﻿using HomeWork6;
+int countClientsProduct = 5;
+CatalogProducts catalog = new CatalogProducts();
+ServiceSelectionProduct selectionProduct = new ServiceSelectionProduct(countClientsProduct);
+Product[] clientProduct = selectionProduct.SelectClientsProduct(catalog.AllProducts);
+Card clientsCard = ServiceFullCard.FullClientsCard(clientProduct);
+ServiceClientOrder clientOrder = new ServiceClientOrder();
+var (stringOrder, order) = clientOrder.CreateOrder(clientsCard);
+Console.WriteLine(stringOrder);
+ServiseWriteAvailableProduct serviseWrite = new ServiseWriteAvailableProduct();
+serviseWrite.WriteAvailableProduct(order.ClientCard.ClientProducts);

@@ -9,41 +9,16 @@ namespace HomeWork6
 {
     internal class Order
     {
-        public Order()
+        public Order(Card card)
         {
             Date = DateTime.Now;
             OrderId = Guid.NewGuid();
-            ClientProducts = Product.GetMasClientsProducts();
+            ClientCard = card;
         }
 
         public Guid OrderId { get; set; }
         public DateTime Date { get; set; }
-        public Product[] ClientProducts { get; set; }
-        public string ProcessedOrder(Basket basket)
-        {
-            // ClientProducts = basket.ClientProducts;
-            string res = " ";
-            string productNotAvailable = " ";
-            int outOfStock = 0;
-            for (int i = 0; i < ClientProducts.Length; i++)
-            {
-                if (!ClientProducts[i].IsAvailable)
-                {
-                    outOfStock++;
-                    productNotAvailable += $"{ClientProducts[i].Name} not available! ";
-                }
-            }
 
-            if (outOfStock > 0)
-            {
-                res = " Sorry! " + productNotAvailable;
-            }
-            else
-            {
-                res = $"Success! Your order {OrderId} has been generated.";
-            }
-
-            return res;
-        }
+        public Card ClientCard { get; set; }
     }
 }
