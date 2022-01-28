@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class ServiseCheckAvailability
+    internal class CheckAvailabilityService
     {
         internal bool CheckAvailability(Product product)
         {

@@ -9,7 +9,7 @@ namespace HomeWork6
 {
     internal class Order
     {
-        public Order(Card card)
+        public Order(Cart card)
         {
             Date = DateTime.Now;
             OrderId = Guid.NewGuid();
@@ -19,6 +19,6 @@ namespace HomeWork6
         public Guid OrderId { get; set; }
         public DateTime Date { get; set; }
 
-        public Card ClientCard { get; set; }
+        public Cart ClientCard { get; set; }
     }
 }

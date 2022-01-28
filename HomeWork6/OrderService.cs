@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class ServiceClientOrder
+    internal class OrderService
     {
-        internal (string, Order) CreateOrder(Card card)
+        internal (string, Order) CreateOrder(Cart card)
         {
             string res = " ";
             string productNotAvailable = " ";
             int outOfStock = 0;
-            ServiseCheckAvailability checkAvailability = new ServiseCheckAvailability();
+            CheckAvailabilityService checkAvailability = new CheckAvailabilityService();
             for (int i = 0; i < card.ClientProducts.Length; i++)
             {
                 if (!checkAvailability.CheckAvailability(card.ClientProducts[i]))

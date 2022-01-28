@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class ServiseWriteAvailableProduct
+    internal class WriteService
     {
         internal void WriteAvailableProduct(Product[] products)
         {
@@ -16,6 +16,14 @@ namespace HomeWork6
                 {
                     Console.WriteLine($"{products[i].Name} is available");
                 }
+            }
+        }
+
+        internal void WriteString(string input)
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                Console.WriteLine(input);
             }
         }
     }

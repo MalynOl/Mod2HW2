@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class ServiceFullCard
+    internal class CartService
     {
-        internal static Card FullClientsCard(Product[] clientsProduct)
+        internal static Cart FullCart(Product[] clientsProduct)
         {
-            Card clientsCard = new Card(clientsProduct);
+            Cart clientsCard = new Cart(clientsProduct);
             return clientsCard;
         }
     }

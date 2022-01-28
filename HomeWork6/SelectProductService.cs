@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class ServiceSelectionProduct
+    internal class SelectProductService
     {
-        public ServiceSelectionProduct(int countProduct)
+        public SelectProductService(int countProduct)
         {
             CountClientsProduct = countProduct;
         }

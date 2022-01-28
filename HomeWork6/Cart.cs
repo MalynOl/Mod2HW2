@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace HomeWork6
 {
-    internal class Card
+    internal class Cart
     {
         private Guid _idCard;
         private Guid _idClient;
-        public Card(Product[] clientsProduct)
+
+        public Cart(Product[] clientsProduct)
         {
             ClientProducts = clientsProduct;
             _idCard = Guid.NewGuid();
